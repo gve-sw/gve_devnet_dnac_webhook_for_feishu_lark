@@ -1,0 +1,70 @@
+{
+  "msg_type": "interactive",
+  "card": {
+    "config": {
+      "wide_screen_mode": true,
+      "enable_forward": true
+    },
+    "elements": [
+      {
+        "tag": "div",
+        "text": {
+          "content": "Alert from the DNA Center **{{ message['domain'] }}**",
+          "tag": "lark_md"
+        }
+      },
+      {
+        "fields": [
+          {
+            "is_short": true,
+            "text": {
+              "content": "**Category** : {{ message['category'] }}",
+              "tag": "lark_md"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "content": "**Severity** : {{ message['severity'] }}",
+              "tag": "lark_md"
+            }
+          },
+          {
+            "text": {
+              "content": "**Instance ID** : {{ message['instanceId'] }}",
+              "tag": "lark_md"
+            }
+          }
+        ],
+        "tag": "div"
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "fields": [
+          {
+            "text": {
+              "content": "**{{ message['eventId'] }}**",
+              "tag": "lark_md"
+            }
+          },
+          {
+            "text": {
+              "content": "{{ message['description'] }}",
+              "tag": "lark_md"
+            }
+          }
+        ],
+        "tag": "div"
+      }
+    ],
+    "header": {
+      "template": "blue",
+      "title": {
+        "content": "Notification Alert",
+        "tag": "plain_text"
+      }
+    }
+  }
+}
